@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 172 66% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom pharmacy colors */
+    --pharmacy-blue: 199 89% 48%;
+    --pharmacy-blue-light: 199 89% 95%;
+    --pharmacy-teal: 172 66% 50%;
+    --pharmacy-teal-light: 172 66% 95%;
+    --pharmacy-green: 142 71% 45%;
+    --pharmacy-green-light: 142 71% 95%;
+    --pharmacy-orange: 25 95% 53%;
+    --pharmacy-orange-light: 25 95% 95%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(172, 66%, 50%) 100%);
+    --gradient-header: linear-gradient(135deg, hsl(199, 89%, 38%) 0%, hsl(199, 89%, 48%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -2px hsl(215 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.1);
+    --shadow-card: 0 4px 20px -2px hsl(199 89% 48% / 0.12);
+    --shadow-glow: 0 0 30px -5px hsl(199 89% 48% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 55%;
+    --primary-foreground: 215 25% 10%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 172 66% 55%;
+    --accent-foreground: 215 25% 10%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 199 89% 55%;
+
+    --pharmacy-blue: 199 89% 55%;
+    --pharmacy-blue-light: 199 89% 15%;
+    --pharmacy-teal: 172 66% 55%;
+    --pharmacy-teal-light: 172 66% 15%;
+    --pharmacy-green: 142 71% 50%;
+    --pharmacy-green-light: 142 71% 15%;
+    --pharmacy-orange: 25 95% 58%;
+    --pharmacy-orange-light: 25 95% 15%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(199, 89%, 55%) 0%, hsl(172, 66%, 55%) 100%);
+    --gradient-header: linear-gradient(135deg, hsl(199, 89%, 45%) 0%, hsl(199, 89%, 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(215, 25%, 13%) 0%, hsl(215, 25%, 10%) 100%);
+
+    --shadow-card: 0 4px 20px -2px hsl(199 89% 55% / 0.15);
+    --shadow-glow: 0 0 30px -5px hsl(199 89% 55% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .pharmacy-card {
+    @apply bg-card rounded-xl border border-border p-6;
+    box-shadow: var(--shadow-card);
+    background: var(--gradient-card);
+  }
+
+  .pharmacy-header {
+    background: var(--gradient-header);
+  }
+
+  .stat-card {
+    @apply relative overflow-hidden rounded-xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .stat-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-10;
+    background: var(--gradient-primary);
+  }
+
+  .medicine-row {
+    @apply transition-colors duration-200;
+  }
+
+  .medicine-row:hover {
+    @apply bg-secondary/50;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Thermal Receipt Styles */
+.thermal-receipt {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  line-height: 1.3;
+  width: 280px;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  padding: 10px;
+}
+
+.thermal-receipt .receipt-header {
+  text-align: center;
+  border-bottom: 1px dashed #000;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.thermal-receipt .shop-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.thermal-receipt .shop-address {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.thermal-receipt .shop-phone {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.thermal-receipt .receipt-title {
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 8px 0;
+  border-bottom: 1px dashed #000;
+  padding-bottom: 8px;
+}
+
+.thermal-receipt .meta-info {
+  font-size: 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #000;
+  padding-bottom: 8px;
+}
+
+.thermal-receipt .meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.thermal-receipt .meta-label {
+  font-weight: bold;
+}
+
+.thermal-receipt table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.thermal-receipt th {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 4px 2px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.thermal-receipt th:last-child,
+.thermal-receipt td:last-child {
+  text-align: right;
+}
+
+.thermal-receipt th:nth-child(3),
+.thermal-receipt td:nth-child(3),
+.thermal-receipt th:nth-child(4),
+.thermal-receipt td:nth-child(4) {
+  text-align: right;
+}
+
+.thermal-receipt td {
+  padding: 3px 2px;
+  vertical-align: top;
+}
+
+.thermal-receipt .medicine-name {
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.thermal-receipt .totals-section {
+  border-top: 1px dashed #000;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+.thermal-receipt .total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
+
+.thermal-receipt .total-row.main {
+  font-size: 12px;
+  font-weight: bold;
+  border-top: 1px solid #000;
+  padding-top: 4px;
+  margin-top: 4px;
+}
+
+.thermal-receipt .amount-words {
+  font-size: 9px;
+  font-style: italic;
+  margin: 8px 0;
+  padding: 4px;
+  border: 1px dashed #000;
+  text-align: center;
+}
+
+.thermal-receipt .bangla-notice {
+  font-size: 9px;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed #000;
+  line-height: 1.5;
+}
+
+.thermal-receipt .thank-you {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+/* Print styles - prevent duplicate printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .thermal-receipt,
+  .thermal-receipt * {
+    visibility: visible;
+  }
+  
+  .thermal-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 78mm;
+    padding: 3mm;
+  }
+}
