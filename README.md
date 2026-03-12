@@ -72,7 +72,7 @@ See `.env.example` for all required variables. You'll need:
 
 ## 🌐 Live Demo
 
-**[anarika-pharmacy.netlify.app/auth](https://anarika-pharmacy.netlify.app/auth)**
+**[anarika-pharmacy.netlify.app](https://anarika-pharmacy.netlify.app/auth)**
 
 🧪 Demo Accounts
 You can try the app using the following demo credentials:
