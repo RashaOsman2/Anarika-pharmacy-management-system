@@ -2,6 +2,9 @@ export const ALLOWED_USERS: Record<string, string> = {
   'shop1@gmail.com': 'shop1',
   'shop2@gmail.com': 'shop2',
   'jesans418@gmail.com': 'admin',
+  'demoshop1@gmail.com': 'shop1',
+  'demoshop2@gmail.com': 'shop2',
+  'demoadmin@gmail.com': 'admin',
 };
 
 export const ROLE_DASHBOARDS: Record<string, string> = {
