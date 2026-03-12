@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# 💊 Anarika — Pharmacy Management System
 
-## Project info
+> Multi-shop inventory management, stock tracking, and receipt generation for pharmacy operations.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Platform](https://img.shields.io/badge/Platform-Web-61DAFB?style=flat-square&logo=react&logoColor=white)
+![Language](https://img.shields.io/badge/Language-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Backend](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
+![Database](https://img.shields.io/badge/Database-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-E8A830?style=flat-square)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 About
 
-**Use Lovable**
+**Anarika** is a full-stack Pharmacy Management System designed to handle the complete operational needs of pharmacy businesses with multiple branches. The system helps pharmacies manage their operations more efficiently — tracking products, maintaining stock levels, and organizing sales records across different stores.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Features
 
-**Use your preferred IDE**
+- 🏪 **Multi-shop support** — manage inventory across multiple branches from one dashboard
+- 📦 **Stock management** — track product quantities, set low-stock alerts
+- 🧾 **Receipt generation** — auto-generate professional receipts for sales transactions
+- 📊 **Sales reports** — detailed history of transactions per store with analytics
+- 🔍 **Product search** — quickly find items across all branches
+- 👤 **Role-based access** — separate Owner dashboard and Shop Staff dashboard
+- 🔄 **Restock management** — track restocking history per product and branch
+- 🗑️ **Stock removal history** — audit trail for removed or expired items
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Tech Stack
 
-Follow these steps:
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React + TypeScript |
+| Styling | Tailwind CSS + shadcn/ui |
+| Auth | Firebase Authentication |
+| Database | Supabase (PostgreSQL) |
+| ORM | Drizzle ORM |
+| Deployment | Netlify |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# 1. Clone the repo
+git clone https://github.com/RashaOsman2/Anarika-pharmacy-management-system.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. Install dependencies
+npm install
+
+# 3. Set up environment variables
+cp .env.example .env
+# Fill in your Firebase and Supabase credentials
+
+# 4. Run development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Environment Variables
 
-**Use GitHub Codespaces**
+See `.env.example` for all required variables. You'll need:
+- Firebase project credentials
+- Supabase project credentials (URL + anon key)
+- Database URL (from Supabase dashboard)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 👨‍💻 Developer
 
-This project is built with:
+**Yeasin Osman Rasha**
+Software Engineering Student · Daffodil International University
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+[![GitHub](https://img.shields.io/badge/GitHub-RashaOsman2-181717?style=flat-square&logo=github)](https://github.com/RashaOsman2)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-E8A830?style=flat-square)](https://your-portfolio-url.com)
