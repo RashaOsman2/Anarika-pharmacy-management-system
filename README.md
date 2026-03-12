@@ -75,13 +75,16 @@ See `.env.example` for all required variables. You'll need:
 **[anarika-pharmacy.netlify.app](https://anarika-pharmacy.netlify.app/auth)**
 
 🧪 Demo Accounts
+
 You can try the app using the following demo credentials:
 
-| Role       | Email                    | Password       |
-|------------|--------------------------|----------------|
-| Shop 1 Staff | demoshop1@gmail.com    | demo1234       |
-| Shop 2 Staff | demoshop2@gmail.com    | demo1234       |
-| Admin      | demoadmin@gmail.com      | demoadmin1234  |
+| Role | Email | Password |
+|------|-------|----------|
+| Shop 1 Staff | demoshop1@gmail.com | demo1234 |
+| Shop 2 Staff | demoshop2@gmail.com | demo1234 |
+| Admin | demoadmin@gmail.com | demoadmin1234 |
+
+> ⚠️ **Demo accounts are view-only.** You can browse all dashboards, view stock, sales history, and reports — but actions like adding products, making sales, restocking, or modifying data are disabled to protect the live data.
 
 
 ## 👨‍💻 Developer
